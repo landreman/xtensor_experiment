@@ -1,0 +1,9 @@
+[submodule "externalPackages/xtensor-python"]
+	path = externalPackages/xtensor-python
+	url = https://github.com/xtensor-stack/xtensor-python.git
+[submodule "externalPackages/xtensor"]
+	path = externalPackages/xtensor
+	url = https://github.com/xtensor-stack/xtensor.git
+[submodule "externalPackages/xtl"]
+	path = externalPackages/xtl
+	url = https://github.com/xtensor-stack/xtl.git

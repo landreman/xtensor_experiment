@@ -36,6 +36,16 @@ class get_numpy_include(object):
         import numpy as np
         return np.get_include()
 
+"""
+print('get_pybind_include():', get_pybind_include())
+print('get_numpy_include():', get_numpy_include())
+print('sys.prefix:', sys.prefix)
+exit(0)
+"""
+#print('New include dir:', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'externalPackages', 'xtensor'))
+#exit(0)
+
+root_dir = os.path.dirname(os.path.abspath(__file__))
 
 ext_modules = [
     Extension(
@@ -46,6 +56,9 @@ ext_modules = [
             get_pybind_include(),
             get_pybind_include(user=True),
             get_numpy_include(),
+            os.path.join(root_dir, 'externalPackages', 'xtl', 'include'),
+            os.path.join(root_dir, 'externalPackages', 'xtensor', 'include'),
+            os.path.join(root_dir, 'externalPackages', 'xtensor-python', 'include'),
             os.path.join(sys.prefix, 'include'),
             os.path.join(sys.prefix, 'Library', 'include')
         ],

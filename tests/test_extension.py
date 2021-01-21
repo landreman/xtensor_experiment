@@ -1,9 +1,11 @@
+#!/usr/bin/env python
+
 import xtensor_experiment as m
-from unittest import TestCase
+import unittest
 import numpy as np
 
 
-class ExampleTest(TestCase):
+class ExampleTest(unittest.TestCase):
 
     def test_example1(self):
         self.assertEqual(4, m.example1([4, 5, 6]))
@@ -27,3 +29,5 @@ class ExampleTest(TestCase):
         y = m.readme_example1(v)
         np.testing.assert_allclose(y, 1.2853996391883833, 1e-12)
 
+if __name__ == '__main__':
+    unittest.main()
